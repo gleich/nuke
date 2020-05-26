@@ -29,6 +29,7 @@ func Quit(name string) {
 	cmd := exec.Command("pkill", "-x", cleanedName)
 	err := cmd.Run()
 	if err != nil {
+		fmt.Println("❌ Failed to quit " + name)
 		log.Fatal(err)
 	}
 	fmt.Println("💣 " + name + " quitted")
