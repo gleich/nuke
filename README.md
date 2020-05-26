@@ -1,3 +1,5 @@
+![Title Example](title.gif)
+
 # nuke
 
 ![Go Build](https://github.com/Matt-Gleich/nuke/workflows/Go%20Build/badge.svg)
