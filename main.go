@@ -1,7 +1,8 @@
 package main
 
 import (
-	"fmt"
+	"log"
+	"runtime"
 
 	"github.com/Matt-Gleich/nuke/applications"
 	"github.com/Matt-Gleich/nuke/input"
@@ -9,7 +10,10 @@ import (
 )
 
 func main() {
+	if runtime.GOOS != "darwin" {
+		log.Fatal("Only support for macOS")
+	}
 	output.Title()
-	input.CheckWithUser()
-	fmt.Println(applications.GetApplications())
+	apps := applications.GetApplications()
+	input.ExecutingTerm(apps)
 }
