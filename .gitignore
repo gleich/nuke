@@ -1,3 +1,5 @@
+dist/*
+
 # macos
 .DS_Store
 
