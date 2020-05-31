@@ -1,0 +1,26 @@
+project_name: nuke
+release:
+  github:
+    owner: Matt-Gleich
+    name: nuke
+  prerelease: auto
+changelog:
+  skip: true
+before:
+  hooks:
+    - go mod download
+builds:
+  - goos:
+      - darwin
+    goarch:
+      - amd64
+brews:
+  - github:
+      owner: Matt-Gleich
+      name: homebrew-taps
+    folder: Formula
+    homepage: 'https://mattglei.ch'
+    description: '☢️ Force quit all applications with one terminal command'
+    commit_author:
+      name: Matt-Gleich
+      email: matthewgleich@gmail.com

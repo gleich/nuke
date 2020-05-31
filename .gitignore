@@ -1,5 +1,4 @@
-# executable
-nuke
+dist/*
 
 # macos
 .DS_Store
