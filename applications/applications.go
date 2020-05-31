@@ -16,7 +16,7 @@ func Get() []string {
 	dirtyApplications := strings.Split(string(out), ",")
 	cleanApplications := []string{}
 	for _, app := range dirtyApplications {
-		if strings.Trim(strings.TrimSpace(app), "\n") != "Finder" {
+		if strings.TrimSuffix(strings.TrimSpace(app), "\n") != "Finder" {
 			cleanApplications = append(cleanApplications, strings.TrimSpace(app))
 		}
 	}
