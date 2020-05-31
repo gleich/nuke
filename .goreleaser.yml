@@ -1,23 +1,28 @@
-# This is an example goreleaser.yaml file with some sane defaults.
-# Make sure to check the documentation at http://goreleaser.com
-before:
-  hooks:
-    # You may remove this if you don't use go modules.
-    - go mod download
-    # you may remove this if you don't need go generate
-    - go generate ./...
-builds:
-  - env:
-      - CGO_ENABLED=0
+project_name: nuke
 archives:
   - format: binary
-checksum:
-  name_template: 'checksums.txt'
-snapshot:
-  name_template: '{{ .Tag }}-next'
+release:
+  github:
+    owner: Matt-Gleich
+    name: nuke
+  prerelease: auto
 changelog:
-  sort: asc
-  filters:
-    exclude:
-      - '^docs:'
-      - '^test:'
+  skip: true
+before:
+  hooks:
+    - go mod download
+builds:
+  - goos:
+      - darwin
+    goarch:
+      - amd64
+brews:
+  - github:
+      owner: Matt-Gleich
+      name: homebrew-taps
+    folder: Formula
+    homepage: 'https://mattglei.ch'
+    description: '☢️ Force quit all applications with one terminal command'
+    commit_author:
+      name: Matt-Gleich
+      email: matthewgleich@gmail.com
