@@ -1,6 +1,4 @@
 project_name: nuke
-archives:
-  - format: binary
 release:
   github:
     owner: Matt-Gleich
