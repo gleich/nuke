@@ -27,7 +27,7 @@ func ExecutingTerm(runningApps []string) []string {
 		}
 	}
 	if !found {
-		output.Error("\n" + strings.TrimSuffix(program, "\n") + " is not an open application")
+		output.Error("\n" + strings.TrimSuffix(program, "\n") + " is not open")
 	}
 	return cleanedApps
 }
