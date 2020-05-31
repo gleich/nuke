@@ -1,0 +1,21 @@
+name: Go Format
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Go 1.x
+        uses: actions/setup-go@v2
+        with:
+          go-version: ^1.13
+        id: go
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+      - name: Format Code
+        run: gofmt -s -w .
+      - name: If Changes, Fail
+        run: git diff --exit-code
