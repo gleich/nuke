@@ -10,11 +10,7 @@ builds:
   - env:
       - CGO_ENABLED=0
 archives:
-  replacements:
-    amd64: x86_64
-  format: binary
-  files:
-    - none*
+  - format: binary
 checksum:
   name_template: 'checksums.txt'
 snapshot:
