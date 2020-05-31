@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"os"
 	"strings"
+
+	"github.com/Matt-Gleich/nuke/output"
 )
 
 // ExecutingTerm ... Ask the user what terminal they are executing from
@@ -25,8 +27,7 @@ func ExecutingTerm(runningApps []string) []string {
 		}
 	}
 	if !found {
-		fmt.Println("\n" + strings.TrimSuffix(program, "\n") + " is not an open application")
-		os.Exit(0)
+		output.Error("\n" + strings.TrimSuffix(program, "\n") + " is not an open application")
 	}
 	return cleanedApps
 }

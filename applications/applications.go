@@ -1,10 +1,11 @@
 package applications
 
 import (
-	"fmt"
 	"log"
 	"os/exec"
 	"strings"
+
+	"github.com/Matt-Gleich/nuke/output"
 )
 
 // Get ... Get a list of all the open application
@@ -29,8 +30,7 @@ func Quit(name string) {
 	cmd := exec.Command("pkill", "-x", cleanedName)
 	err := cmd.Run()
 	if err != nil {
-		fmt.Println("❌ Failed to quit " + name)
-		log.Fatal(err)
+		output.Error("Failed to quit " + name)
 	}
-	fmt.Println("💣 " + name + " quitted")
+	output.Success("💥 Quitted " + name)
 }
