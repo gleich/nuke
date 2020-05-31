@@ -4,8 +4,6 @@ release:
     owner: Matt-Gleich
     name: nuke
   prerelease: auto
-changelog:
-  skip: true
 before:
   hooks:
     - go mod download
