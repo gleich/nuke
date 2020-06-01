@@ -1,0 +1,17 @@
+name: goreleaser format
+
+on:
+  - pull_request
+  - push
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Run Check
+        uses: goreleaser/goreleaser-action@v2
+        with:
+          version: latest
+          args: check
