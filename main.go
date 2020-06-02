@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"runtime"
 
 	"github.com/Matt-Gleich/nuke/applications"
@@ -12,8 +11,7 @@ import (
 
 func main() {
 	if runtime.GOOS != "darwin" {
-		fmt.Println("This application only supports macos")
-		os.Exit(1)
+		output.Error("This application only runs on macos. Your running on " + runtime.GOOS)
 	}
 	output.Title()
 	apps := applications.Get()
@@ -22,4 +20,5 @@ func main() {
 	for _, app := range cleanedApps {
 		applications.Quit(app)
 	}
+	output.Success("\n🤯 All Applications Quitted!")
 }
