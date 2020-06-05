@@ -20,5 +20,6 @@ func main() {
 	for _, app := range cleanedApps {
 		applications.Quit(app)
 	}
+	applications.CloseFinder()
 	output.Success("\n🤯 All Applications Quitted!")
 }
