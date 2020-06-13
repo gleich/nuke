@@ -10,6 +10,10 @@ import (
 
 // Get ... Get a list of all the open application
 func Get() []string {
+	err := exec.Command("osascript", "-e", `tell application "System Events" to activate`).Run()
+	if err != nil {
+		log.Fatal(err)
+	}
 	out, err := exec.Command("osascript", "-e", `tell application "System Events" to get name of (processes where background only is false)`).Output()
 	if err != nil {
 		log.Fatal(err)
