@@ -1,6 +1,6 @@
 ![Title Example](title.gif)
 
-# nuke
+# nuke ![GitHub release (latest by date)](https://img.shields.io/github/v/release/Matt-Gleich/nuke)
 
 ![Go Build](https://github.com/Matt-Gleich/nuke/workflows/Go%20Build/badge.svg) ![Go Format](https://github.com/Matt-Gleich/nuke/workflows/Go%20Format/badge.svg) ![goreleaser format](https://github.com/Matt-Gleich/nuke/workflows/goreleaser%20format/badge.svg) ![goreleaser](https://github.com/Matt-Gleich/nuke/workflows/goreleaser/badge.svg)
 
