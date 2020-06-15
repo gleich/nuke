@@ -10,12 +10,12 @@ import (
 )
 
 // ExecutingTerm ... Ask the user what terminal they are executing from
-func ExecutingTerm(runningApps []string) []string {
+func ExecutingTerm(runningApps, ignoredApps []string) []string {
 	for _, app := range runningApps {
 		fmt.Println(app)
 	}
 	reader := bufio.NewReader(os.Stdin)
-	fmt.Println("\nOut of the applications above, which one\nis the one you are executing this command from?")
+	fmt.Println("\nOut of the open applications above, which one\nis the one you are executing this command from?")
 	program, _ := reader.ReadString('\n')
 	var found bool
 	cleanedApps := []string{}
@@ -23,7 +23,16 @@ func ExecutingTerm(runningApps []string) []string {
 		if strings.Trim(app, "\n") == strings.Trim(program, "\n") {
 			found = true
 		} else {
-			cleanedApps = append(cleanedApps, app)
+			var notIgnored bool
+			for _, ignoredApp := range ignoredApps {
+				notIgnored = ignoredApp != app
+				if notIgnored {
+					break
+				}
+			}
+			if notIgnored {
+				cleanedApps = append(cleanedApps, app)
+			}
 		}
 	}
 	if !found {
