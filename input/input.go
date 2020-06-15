@@ -31,7 +31,7 @@ func ExecutingTerm(runningApps, ignoredApps []string) []string {
 					break
 				}
 			}
-			if notIgnored {
+			if notIgnored || len(ignoredApps) == 0 {
 				cleanedApps = append(cleanedApps, app)
 			}
 		}
