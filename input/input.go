@@ -13,7 +13,7 @@ import (
 // ExecutingTerm ... Ask the user what terminal they are executing from
 func ExecutingTerm(runningApps, ignoredApps []string) []string {
 	for _, app := range runningApps {
-		color.Color(0, 255, 0).Underline().Bold().Println(app)
+		color.Color(0, 255, 0).Println(app)
 	}
 	reader := bufio.NewReader(os.Stdin)
 	fmt.Println("\nOut of the open applications above, which one\nis the one you are executing this command from?")
