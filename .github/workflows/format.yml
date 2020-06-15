@@ -1,11 +1,11 @@
-name: Go Format
+name: Format
 
 on:
   - push
   - pull_request
 
 jobs:
-  format:
+  gofmt:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Go 1.x
@@ -20,7 +20,7 @@ jobs:
       - name: If Changes, Fail
         run: git diff --exit-code
 
-  tidy-gomod:
+  gomod:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Go 1.x
