@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"runtime"
 
 	"github.com/Matt-Gleich/nuke/applications"
@@ -17,6 +18,9 @@ func main() {
 	var ignoredApps []string
 	if config.Exists() {
 		ignoredApps = config.Read()["ignored"]
+	}
+	for _, app := range os.Args[1:] {
+		ignoredApps = append(ignoredApps, app)
 	}
 	output.Title()
 	apps := applications.Get()

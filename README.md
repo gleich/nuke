@@ -24,6 +24,20 @@ ignored:
   - Terminal
 ```
 
+If you want to ignore apps on the fly then you can pass them in as arguments. Keep in mind that spaces and other characters might need to be escaped. Below are two examples
+
+```bash
+$ nuke Google\ Chrome Visual\ Studio\ Code
+```
+
+Ignores Google Chrome and Visual Studio Code
+
+```bash
+$ nuke Music Slack Notion
+```
+
+Ignores Music, Slack, and Notion
+
 ## 🙋‍♀️🙋‍♂️ Contributing
 
 All contributions are welcome! Just make sure that its not an already existing issue or pull request.
