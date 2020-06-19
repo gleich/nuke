@@ -1,11 +1,11 @@
 package applications
 
 import (
-	"log"
 	"os/exec"
 	"strings"
 
 	"github.com/Matt-Gleich/nuke/output"
+	"github.com/Matt-Gleich/statuser"
 )
 
 // Get ... Get a list of all the open application
@@ -14,7 +14,7 @@ func Get() []string {
 	if err != nil {
 		err := exec.Command("osascript", "-e", `tell application "System Events" to activate`).Run()
 		if err != nil {
-			log.Fatal(err)
+			statuser.Error("Failed to get running list of applications", err, 0)
 		}
 	}
 	dirtyApplications := strings.Split(string(out), ",")
@@ -32,7 +32,7 @@ func Quit(name string) {
 	cleanedName := strings.ReplaceAll(name, " ", "\\ ")
 	err := exec.Command("pkill", "-x", cleanedName).Run()
 	if err != nil {
-		output.Error("Failed to quit " + name)
+		statuser.Error("Failed to quit "+name, err, 0)
 	}
 	output.Success("💥 Quitted " + name)
 }
@@ -41,7 +41,7 @@ func Quit(name string) {
 func CloseFinder() {
 	err := exec.Command("osascript", "-e", `tell application "Finder" to close windows`).Run()
 	if err != nil {
-		output.Error("Failed to close all finder windows")
+		statuser.Error("Failed to close all finder windows", err, 0)
 	}
 	output.Success("💥 Closed all Finder windows")
 }

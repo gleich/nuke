@@ -4,7 +4,7 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/Matt-Gleich/nuke/output"
+	"github.com/Matt-Gleich/statuser"
 	"gopkg.in/yaml.v3"
 )
 
@@ -14,7 +14,7 @@ var path = "/.config/nuke/"
 func Exists() bool {
 	home, err := os.UserHomeDir()
 	if err != nil {
-		output.Error("Failed to get user home path")
+		statuser.Error("Failed to get user home path", err, 0)
 	}
 	path = home + path
 
@@ -39,13 +39,13 @@ func Exists() bool {
 func Read() map[string][]string {
 	contents, err := ioutil.ReadFile(path)
 	if err != nil {
-		output.Error("Failed to read from config in\n\t" + path)
+		statuser.Error("Failed to read from config in\n\t"+path, err, 0)
 	}
 
 	var yamlContents map[string][]string
 	err = yaml.Unmarshal(contents, &yamlContents)
 	if err != nil {
-		output.Error("Failed to read the config")
+		statuser.Error("Failed to read the config", err, 0)
 	}
 	return yamlContents
 }

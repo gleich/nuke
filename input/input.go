@@ -2,11 +2,12 @@ package input
 
 import (
 	"bufio"
+	"errors"
 	"fmt"
 	"os"
 	"strings"
 
-	"github.com/Matt-Gleich/nuke/output"
+	"github.com/Matt-Gleich/statuser"
 	"github.com/wayneashleyberry/truecolor/pkg/color"
 )
 
@@ -37,7 +38,7 @@ func ExecutingTerm(runningApps, ignoredApps []string) []string {
 		}
 	}
 	if !found {
-		output.Error("\n" + strings.TrimSuffix(program, "\n") + " is not open")
+		statuser.Error("\n"+strings.TrimSuffix(program, "\n")+" is not open", errors.New("No golang error"), 0)
 	}
 	return cleanedApps
 }
