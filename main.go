@@ -1,7 +1,6 @@
 package main
 
 import (
-	"errors"
 	"fmt"
 	"os"
 	"runtime"
@@ -10,12 +9,12 @@ import (
 	"github.com/Matt-Gleich/nuke/config"
 	"github.com/Matt-Gleich/nuke/input"
 	"github.com/Matt-Gleich/nuke/output"
-	"github.com/Matt-Gleich/statuser"
+	"github.com/Matt-Gleich/statuser/v2"
 )
 
 func main() {
 	if runtime.GOOS != "darwin" {
-		statuser.Error("This application only works on macOS", errors.New("Environment runtime error"), 0)
+		statuser.ErrorMsg("This application only works on macOS", 0)
 	}
 	var ignoredApps []string
 	if config.Exists() {
