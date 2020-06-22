@@ -23,6 +23,7 @@ ignored:
   - Google Chrome
   - Terminal
 ```
+_Ignores Google Chrome and Terminal_
 
 If you want to ignore apps on the fly then you can pass them in as arguments. Keep in mind that spaces and other characters might need to be escaped. Below are two examples
 
@@ -30,13 +31,13 @@ If you want to ignore apps on the fly then you can pass them in as arguments. Ke
 $ nuke Google\ Chrome Visual\ Studio\ Code
 ```
 
-Ignores Google Chrome and Visual Studio Code
+_Ignores Google Chrome and Visual Studio Code_
 
 ```bash
 $ nuke Music Slack Notion
 ```
 
-Ignores Music, Slack, and Notion
+_Ignores Music, Slack, and Notion_
 
 ## 🙋‍♀️🙋‍♂️ Contributing
 
