@@ -15,7 +15,7 @@ func ExecutingTerm(runningApps, ignoredApps []string) []string {
 	}
 	_, program, err := prompt.Run()
 	if err != nil {
-		statuser.Error("Failed to get executing terminal", err, 0)
+		statuser.Error("Failed to get executing terminal", err, 1)
 	}
 	var found bool
 	cleanedApps := []string{}
@@ -36,7 +36,7 @@ func ExecutingTerm(runningApps, ignoredApps []string) []string {
 		}
 	}
 	if !found {
-		statuser.ErrorMsg("\n"+strings.TrimSuffix(program, "\n")+" is not open", 0)
+		statuser.ErrorMsg("\n"+strings.TrimSuffix(program, "\n")+" is not open", 1)
 	}
 	return cleanedApps
 }

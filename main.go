@@ -14,7 +14,7 @@ import (
 
 func main() {
 	if runtime.GOOS != "darwin" {
-		statuser.ErrorMsg("This application only works on macOS", 0)
+		statuser.ErrorMsg("This application only works on macOS", 1)
 	}
 	var ignoredApps []string
 	if config.Exists() {
