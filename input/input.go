@@ -10,7 +10,7 @@ import (
 // ExecutingTerm ... Ask the user what terminal they are executing from
 func ExecutingTerm(runningApps, ignoredApps []string) []string {
 	prompt := promptui.Select{
-		Label: "Executing from",
+		Label: "Executing nuke command from",
 		Items: runningApps,
 	}
 	_, program, err := prompt.Run()
