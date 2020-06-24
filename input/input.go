@@ -9,34 +9,39 @@ import (
 
 // ExecutingTerm ... Ask the user what terminal they are executing from
 func ExecutingTerm(runningApps, ignoredApps []string) []string {
+	cleanedApps := []string{}
+	// Removing ignored applications
+	for _, app := range runningApps {
+		var isIgnored bool
+		for _, ignoredApp := range ignoredApps {
+			if strings.Trim(app, "\n") == strings.Trim(ignoredApp, "\n") {
+				isIgnored = true
+			}
+		}
+		if !isIgnored {
+			cleanedApps = append(cleanedApps, app)
+		}
+	}
 	prompt := promptui.Select{
 		Label: "Executing nuke command from",
-		Items: runningApps,
+		Items: cleanedApps,
 	}
 	_, program, err := prompt.Run()
 	if err != nil {
 		statuser.Error("Failed to get executing terminal", err, 1)
 	}
-	var found bool
-	cleanedApps := []string{}
-	for _, app := range runningApps {
-		if strings.Trim(app, "\n") == strings.Trim(program, "\n") {
-			found = true
+
+	var foundRunning bool
+	cleanedApps2 := []string{}
+	for _, app := range cleanedApps {
+		if strings.Trim(app, "\n") != strings.Trim(program, "\n") {
+			cleanedApps2 = append(cleanedApps2, app)
 		} else {
-			var notIgnored bool
-			for _, ignoredApp := range ignoredApps {
-				notIgnored = ignoredApp != app
-				if notIgnored {
-					break
-				}
-			}
-			if notIgnored || len(ignoredApps) == 0 {
-				cleanedApps = append(cleanedApps, app)
-			}
+			foundRunning = true
 		}
 	}
-	if !found {
+	if !foundRunning {
 		statuser.ErrorMsg("\n"+strings.TrimSuffix(program, "\n")+" is not open", 1)
 	}
-	return cleanedApps
+	return cleanedApps2
 }
