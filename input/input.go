@@ -1,6 +1,7 @@
 package input
 
 import (
+	"sort"
 	"strings"
 
 	"github.com/Matt-Gleich/statuser/v2"
@@ -22,6 +23,7 @@ func ExecutingTerm(runningApps, ignoredApps []string) []string {
 			cleanedApps = append(cleanedApps, app)
 		}
 	}
+	sort.Strings(cleanedApps)
 	prompt := promptui.Select{
 		Label: "Executing nuke command from",
 		Items: cleanedApps,
