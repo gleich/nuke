@@ -1,4 +1,4 @@
-name: Go Build
+name: build
 
 on:
   - push
@@ -15,12 +15,8 @@ jobs:
         id: go
       - name: Checkout Repository
         uses: actions/checkout@v2
-      - name: Get dependencies
+      - name: Get Dependencies
         run: |
           go get -v -t -d ./...
-          if [ -f Gopkg.toml ]; then
-              curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
-              dep ensure
-          fi
       - name: Build
         run: go build -v .

@@ -1,4 +1,4 @@
-name: Format
+name: format
 
 on:
   - push
@@ -19,7 +19,6 @@ jobs:
         run: gofmt -s -w .
       - name: If Changes, Fail
         run: git diff --exit-code
-
   gomod:
     runs-on: ubuntu-latest
     steps:
@@ -34,3 +33,13 @@ jobs:
         run: go mod tidy
       - name: If Changes, Fail
         run: git diff --exit-code
+  goreleaser:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Run Check
+        uses: goreleaser/goreleaser-action@v2
+        with:
+          version: latest
+          args: check
