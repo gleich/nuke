@@ -3,7 +3,6 @@ module github.com/Matt-Gleich/nuke
 go 1.14
 
 require (
-	github.com/Matt-Gleich/statuser v1.0.1
 	github.com/Matt-Gleich/statuser/v2 v2.0.1
 	github.com/lunixbochs/vtclean v1.0.0 // indirect
 	github.com/manifoldco/promptui v0.7.0
