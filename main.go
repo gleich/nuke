@@ -5,6 +5,7 @@ import (
 	"os"
 	"runtime"
 
+	"github.com/Matt-Gleich/desktop"
 	"github.com/Matt-Gleich/nuke/config"
 	"github.com/Matt-Gleich/nuke/input"
 	"github.com/Matt-Gleich/nuke/macos"
@@ -14,8 +15,7 @@ import (
 
 func main() {
 	operatingSystem := runtime.GOOS
-
-	if operatingSystem != "darwin" || operatingSystem != "linux" {
+	if operatingSystem != "darwin" && operatingSystem != "linux" {
 		statuser.ErrorMsg("This application only works on macOS and linux", 1)
 	}
 
@@ -34,9 +34,17 @@ func main() {
 	var apps []string
 	switch operatingSystem {
 	case "darwin":
-		apps = macos.GetApplications()
+		macApps, err := desktop.MacOSApplications()
+		if err != nil {
+			statuser.Error("Failed to get macos applications", err, 1)
+		}
+		apps = macApps
 	case "linux":
-		fmt.Println("a")
+		linuxApps, err := desktop.LinuxApplications()
+		if err != nil {
+			statuser.Error("Failed to get linux applications", err, 1)
+		}
+		apps = linuxApps
 	}
 
 	// Getting executing terminal
@@ -47,9 +55,9 @@ func main() {
 	for _, app := range cleanedApps {
 		switch operatingSystem {
 		case "darwin":
-			macos.QuitApp(app)
+			desktop.MacOSQuitApp(app)
 		case "linux":
-			fmt.Println(app)
+			desktop.LinuxQuitApp(app)
 		}
 	}
 	if operatingSystem == "darwin" {
