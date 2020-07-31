@@ -20,7 +20,7 @@ type Conf struct {
 func Exists() bool {
 	home, err := os.UserHomeDir()
 	if err != nil {
-		statuser.Error("Failed to get user home path", err, 0)
+		statuser.Error("Failed to get user home path", err, 1)
 	}
 	path = home + path
 
@@ -45,12 +45,12 @@ func Exists() bool {
 func Read(conf *Conf) *Conf {
 	contents, err := ioutil.ReadFile(path)
 	if err != nil {
-		statuser.Error("Failed to read from config in\n\t"+path, err, 0)
+		statuser.Error("Failed to read from config in\n\t"+path, err, 1)
 	}
 
 	err = yaml.Unmarshal(contents, &conf)
 	if err != nil {
-		statuser.Error("Failed to read the config", err, 0)
+		statuser.Error("Failed to read the config", err, 1)
 	}
 	return conf
 }
