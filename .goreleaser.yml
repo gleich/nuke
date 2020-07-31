@@ -9,8 +9,14 @@ before:
 builds:
   - goos:
       - darwin
+      - linux
     goarch:
       - amd64
+      - arm
+      - arm64
+    goarm:
+      - 6
+      - 7
 brews:
   - tap:
       owner: Matt-Gleich
