@@ -10,11 +10,11 @@
 
 ## 🚀 Install
 
-## 🍎 MacOS
+### 🍎 MacOS
 
 Simply run `brew tap Matt-Gleich/homebrew-taps` and then `brew install nuke`
 
-## 🐧 Linux
+### 🐧 Linux
 
 Download the binary from the [releases page](https://github.com/Matt-Gleich/nuke/releases) and copy it to your desired location.
 
