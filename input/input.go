@@ -25,7 +25,7 @@ func ExecutingTerm(runningApps, ignoredApps []string) []string {
 	}
 	sort.Strings(cleanedApps)
 	prompt := promptui.Select{
-		Label: "Executing nuke command from",
+		Label: "Running nuke from (what app your currently using):",
 		Items: cleanedApps,
 	}
 	_, program, err := prompt.Run()
