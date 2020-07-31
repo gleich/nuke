@@ -34,6 +34,7 @@ func main() {
 
 	// Getting running applications
 	var apps []string
+	var appsWithPIDs map[string]int
 	switch operatingSystem {
 	case "darwin":
 		macApps, err := desktop.MacOSApplications()
@@ -46,7 +47,10 @@ func main() {
 		if err != nil {
 			statuser.Error("Failed to get linux applications", err, 1)
 		}
-		apps = linuxApps
+		for app := range linuxApps {
+			apps = append(apps, app)
+		}
+		appsWithPIDs = linuxApps
 	}
 
 	// Getting executing terminal
@@ -62,7 +66,7 @@ func main() {
 				statuser.Error("Failed to quit "+app, err, 1)
 			}
 		case "linux":
-			err := desktop.LinuxQuitApp(app)
+			err := desktop.LinuxQuitApp(appsWithPIDs[app])
 			if err != nil {
 				statuser.Error("Failed to quit "+app, err, 1)
 			}
