@@ -71,6 +71,7 @@ func main() {
 				statuser.Error("Failed to quit "+app, err, 1)
 			}
 		}
+		output.Success("💥 Quitted " + app)
 	}
 	if operatingSystem == "darwin" {
 		macos.CloseFinder()
