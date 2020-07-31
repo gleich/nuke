@@ -1,3 +1,4 @@
+<!-- DO NOT REMOVE - contributor_list:data:start:["Matt-Gleich"]:end -->
 ![Title Example](title.gif)
 
 # nuke ![GitHub release (latest by date)](https://img.shields.io/github/v/release/Matt-Gleich/nuke)
@@ -51,3 +52,11 @@ _Ignores Music, Slack, and Notion_
 ## 🙋‍♀️🙋‍♂️ Contributing
 
 All contributions are welcome! Just make sure that its not an already existing issue or pull request.
+
+<!-- DO NOT REMOVE - contributor_list:start -->
+## 👥 Contributors
+
+
+- **[@Matt-Gleich](https://github.com/Matt-Gleich)**
+
+<!-- DO NOT REMOVE - contributor_list:end -->
