@@ -57,9 +57,15 @@ func main() {
 	for _, app := range cleanedApps {
 		switch operatingSystem {
 		case "darwin":
-			desktop.MacOSQuitApp(app)
+			err := desktop.MacOSQuitApp(app)
+			if err != nil {
+				statuser.Error("Failed to quit "+app, err, 1)
+			}
 		case "linux":
-			desktop.LinuxQuitApp(app)
+			err := desktop.LinuxQuitApp(app)
+			if err != nil {
+				statuser.Error("Failed to quit "+app, err, 1)
+			}
 		}
 	}
 	if operatingSystem == "darwin" {
