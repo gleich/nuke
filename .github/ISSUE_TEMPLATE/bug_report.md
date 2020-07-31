@@ -20,7 +20,8 @@ If applicable, add screenshots to help explain your problem.
 
 **Meta Information:**
 
-- macOS Version:
+- OS:
+- OS Version:
 - `nuke` Version:
 
 **Error Output**
