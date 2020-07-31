@@ -10,6 +10,12 @@ import (
 
 var path = "/.config/nuke/"
 
+// Conf ... Config for nuke
+type Conf struct {
+	IgnoreUpdates bool     `yaml:"ignoreUpdates"`
+	IgnoredApps   []string `yaml:"ignoredApps"`
+}
+
 // Exists ... If the config exists
 func Exists() bool {
 	home, err := os.UserHomeDir()
@@ -36,16 +42,15 @@ func Exists() bool {
 }
 
 // Read ... Read from the config file
-func Read() map[string][]string {
+func Read(conf *Conf) *Conf {
 	contents, err := ioutil.ReadFile(path)
 	if err != nil {
 		statuser.Error("Failed to read from config in\n\t"+path, err, 0)
 	}
 
-	var yamlContents map[string][]string
-	err = yaml.Unmarshal(contents, &yamlContents)
+	err = yaml.Unmarshal(contents, &conf)
 	if err != nil {
 		statuser.Error("Failed to read the config", err, 0)
 	}
-	return yamlContents
+	return conf
 }

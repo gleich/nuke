@@ -20,10 +20,17 @@ func main() {
 		statuser.ErrorMsg("This application only works on macOS and linux", 1)
 	}
 
+	var configContents config.Conf
+	if config.Exists() {
+		config.Read(&configContents)
+	}
+
+	fmt.Println(configContents.IgnoreUpdates)
+
 	// Ignoring apps
 	var ignoredApps []string
 	if config.Exists() {
-		ignoredApps = config.Read()["ignored"]
+		ignoredApps = configContents.IgnoredApps
 	}
 	for _, app := range os.Args[1:] {
 		ignoredApps = append(ignoredApps, app)
@@ -31,7 +38,7 @@ func main() {
 
 	output.Title()
 
-	if operatingSystem == "linux" {
+	if operatingSystem == "linux" && !configContents.IgnoreUpdates {
 		version.CheckForUpdate()
 	}
 
