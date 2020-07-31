@@ -10,6 +10,7 @@ import (
 	"github.com/Matt-Gleich/nuke/input"
 	"github.com/Matt-Gleich/nuke/macos"
 	"github.com/Matt-Gleich/nuke/output"
+	"github.com/Matt-Gleich/nuke/version"
 	"github.com/Matt-Gleich/statuser/v2"
 )
 
@@ -29,6 +30,7 @@ func main() {
 	}
 
 	output.Title()
+	version.CheckForUpdate()
 
 	// Getting running applications
 	var apps []string
