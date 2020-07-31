@@ -30,7 +30,10 @@ func main() {
 	}
 
 	output.Title()
-	version.CheckForUpdate()
+
+	if operatingSystem == "linux" {
+		version.CheckForUpdate()
+	}
 
 	// Getting running applications
 	var apps []string
