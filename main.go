@@ -25,8 +25,6 @@ func main() {
 		config.Read(&configContents)
 	}
 
-	fmt.Println(configContents.IgnoreUpdates)
-
 	// Ignoring apps
 	var ignoredApps []string
 	if config.Exists() {
