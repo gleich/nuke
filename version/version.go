@@ -27,7 +27,7 @@ func CheckForUpdate() {
 	var result map[string]interface{}
 	json.NewDecoder(resp.Body).Decode(&result)
 
-	if result["tag_name"] != "v4.1.0" {
+	if result["tag_name"] != "v4.1.1" {
 		fmt.Println("THERE IS AN UPDATE AVALIABLE")
 		fmt.Println("PLEASE UPDATE ASAP\n")
 	}
