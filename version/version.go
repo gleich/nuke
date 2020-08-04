@@ -25,10 +25,14 @@ func CheckForUpdate() {
 	defer resp.Body.Close()
 
 	var result map[string]interface{}
-	json.NewDecoder(resp.Body).Decode(&result)
+	err = json.NewDecoder(resp.Body).Decode(&result)
+	if err != nil {
+		statuser.Error("Failed to get latest version from GitHub", err, 1)
+	}
 
-	if result["tag_name"] != "v4.1.1" {
+	if result["tag_name"] != "v5.1.2" {
 		fmt.Println("THERE IS AN UPDATE AVALIABLE")
-		fmt.Println("PLEASE UPDATE ASAP\n")
+		fmt.Println(`PLEASE UPDATE ASAP
+		`)
 	}
 }

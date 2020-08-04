@@ -30,9 +30,7 @@ func main() {
 	if config.Exists() {
 		ignoredApps = configContents.IgnoredApps
 	}
-	for _, app := range os.Args[1:] {
-		ignoredApps = append(ignoredApps, app)
-	}
+	ignoredApps = append(ignoredApps, os.Args[1:]...)
 
 	output.Title()
 
