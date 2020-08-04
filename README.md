@@ -5,7 +5,7 @@
 # nuke ![GitHub release (latest by date)](https://img.shields.io/github/v/release/Matt-Gleich/nuke)
 
 ![build](https://github.com/Matt-Gleich/nuke/workflows/build/badge.svg)
-![format](https://github.com/Matt-Gleich/nuke/workflows/format/badge.svg)
+![lint](https://github.com/Matt-Gleich/nuke/workflows/lint/badge.svg)
 ![release](https://github.com/Matt-Gleich/nuke/workflows/release/badge.svg)
 
 ☢️ Force quit all applications with one terminal command.

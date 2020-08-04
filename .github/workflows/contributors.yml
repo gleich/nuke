@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: docker://cjdenio/contributor_list:latest
+      - uses: cjdenio/contributor_list@master
         with:
           commit_message: 📝 Update contributors list
+          max_contributors: 10
