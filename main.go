@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"runtime"
+	"time"
 
 	"github.com/Matt-Gleich/desktop"
 	"github.com/Matt-Gleich/nuke/config"
@@ -12,6 +13,7 @@ import (
 	"github.com/Matt-Gleich/nuke/output"
 	"github.com/Matt-Gleich/nuke/version"
 	"github.com/Matt-Gleich/statuser/v2"
+	"github.com/briandowns/spinner"
 )
 
 func main() {
@@ -41,6 +43,9 @@ func main() {
 	// Getting running applications
 	var apps []string
 	var appsWithPIDs map[string]int
+	s := spinner.New(spinner.CharSets[13], 30*time.Millisecond)
+	s.Suffix = " Getting list of applications"
+	s.Start()
 	switch operatingSystem {
 	case "darwin":
 		macApps, err := desktop.MacOSApplications()
@@ -58,6 +63,7 @@ func main() {
 		}
 		appsWithPIDs = linuxApps
 	}
+	s.Stop()
 
 	// Getting executing terminal
 	cleanedApps := input.ExecutingTerm(apps, ignoredApps)
