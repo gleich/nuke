@@ -4,12 +4,18 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"time"
 
 	"github.com/Matt-Gleich/statuser/v2"
+	"github.com/briandowns/spinner"
 )
 
 // CheckForUpdate ... Check for an update for the CLI
 func CheckForUpdate() {
+	s := spinner.New(spinner.CharSets[13], 30*time.Millisecond)
+	s.Suffix = " Checking for update"
+	s.Start()
+
 	// Checking network connection
 	checkResp, err := http.Get("http://clients3.google.com/generate_204")
 	if err != nil {
@@ -35,4 +41,5 @@ func CheckForUpdate() {
 		fmt.Println(`PLEASE UPDATE ASAP
 		`)
 	}
+	s.Stop()
 }
