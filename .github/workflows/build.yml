@@ -1,17 +1,13 @@
 name: build
 
-on:
-  push:
-  pull_request:
-  schedule:
-    - cron: '0 * * * *' # Runs every hour
+on: push
 
 jobs:
   go-build:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [macos-latest, ubuntu-latest]
+        os: [macos-latest, ubuntu-latest, windows-latest]
     steps:
       - name: Set up Go 1.x
         uses: actions/setup-go@v2
@@ -20,8 +16,10 @@ jobs:
         id: go
       - name: Checkout Repository
         uses: actions/checkout@v2
-      - name: Get dependencies
-        run: |
-          go get -v -t -d ./...
-      - name: Build
-        run: go build -v .
+      - run: make build-go
+  docker-dev-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - run: make build-docker-dev-lint

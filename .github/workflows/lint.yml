@@ -1,10 +1,6 @@
 name: lint
 
-on:
-  push:
-  pull_request:
-  schedule:
-    - cron: '0 * * * *' # Runs every hour
+on: push
 
 jobs:
   golangci:
@@ -26,10 +22,7 @@ jobs:
         id: go
       - name: Checkout Repository
         uses: actions/checkout@v2
-      - name: Tidy go mod
-        run: go mod tidy
-      - name: If Changes, Fail
-        run: git diff --exit-code
+      - run: make lint-gomod
   goreleaser:
     runs-on: ubuntu-latest
     steps:
@@ -40,3 +33,16 @@ jobs:
         with:
           version: latest
           args: check
+  hadolint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Linting dev.lint.Dockerfile
+        uses: brpaz/hadolint-action@master
+        with:
+          dockerfile: 'dev.lint.Dockerfile'
+  in-docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: make docker-lint
