@@ -71,6 +71,9 @@ func main() {
 
 	// Quitting applications
 	for _, app := range cleanedApps {
+		s2 := spinner.New(spinner.CharSets[13], 30*time.Millisecond)
+		s2.Suffix = " Quitting " + app
+		s2.Start()
 		switch operatingSystem {
 		case "darwin":
 			err := desktop.MacOSQuitApp(app)
@@ -83,6 +86,7 @@ func main() {
 				statuser.Error("Failed to quit "+app, err, 1)
 			}
 		}
+		s2.Stop()
 		output.Success("💥 Quitted " + app)
 	}
 	if operatingSystem == "darwin" {
