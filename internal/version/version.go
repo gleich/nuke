@@ -10,7 +10,7 @@ import (
 	"github.com/briandowns/spinner"
 )
 
-// CheckForUpdate ... Check for an update for the CLI
+// Check for an update for the CLI
 func CheckForUpdate() {
 	s := spinner.New(spinner.CharSets[13], 30*time.Millisecond)
 	s.Suffix = " Checking for update"

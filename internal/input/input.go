@@ -8,7 +8,7 @@ import (
 	"github.com/manifoldco/promptui"
 )
 
-// ExecutingTerm ... Ask the user what terminal they are executing from
+// Ask the user what terminal they are executing from
 func ExecutingTerm(runningApps, ignoredApps []string) []string {
 	cleanedApps := []string{}
 	// Removing ignored applications

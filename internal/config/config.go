@@ -10,13 +10,13 @@ import (
 
 var path = "/.config/nuke/"
 
-// Conf ... Config for nuke
+// Config for nuke
 type Conf struct {
 	IgnoreUpdates bool     `yaml:"ignoreUpdates"`
 	IgnoredApps   []string `yaml:"ignoredApps"`
 }
 
-// Exists ... If the config exists
+// Check if the config exists
 func Exists() bool {
 	home, err := os.UserHomeDir()
 	if err != nil {
@@ -41,7 +41,7 @@ func Exists() bool {
 	return false
 }
 
-// Read ... Read from the config file
+// Read from the config file
 func Read(conf *Conf) *Conf {
 	contents, err := ioutil.ReadFile(path)
 	if err != nil {

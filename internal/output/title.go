@@ -2,7 +2,7 @@ package output
 
 import "github.com/wayneashleyberry/truecolor/pkg/color"
 
-// Title ... Output the application title
+// Output the application title
 func Title() {
 	title := []string{
 		"                                                 _.-^^---....,,--",
