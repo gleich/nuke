@@ -5,7 +5,6 @@
 build-docker-dev-lint:
 	docker build -f dev.lint.Dockerfile .
 build-go:
-	cd cmd/nuke
 	go get -v -t -d ./...
 	go build -v .
 	rm nuke

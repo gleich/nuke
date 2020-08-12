@@ -7,7 +7,7 @@ import (
 	"github.com/Matt-Gleich/statuser/v2"
 )
 
-//  Close all open finder windows
+// Close all open finder windows
 func CloseFinder() {
 	err := exec.Command("osascript", "-e", `tell application "Finder" to close windows`).Run()
 	if err != nil {
