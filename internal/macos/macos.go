@@ -18,6 +18,6 @@ func CloseFinder() {
 	if err != nil {
 		statuser.Error("Failed to close all finder windows", err, 1)
 	}
-	output.Success("💥 Closed all Finder windows")
 	s.Stop()
+	output.Success("💥 Closed all Finder windows")
 }
