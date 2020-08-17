@@ -1,6 +1,6 @@
 module github.com/Matt-Gleich/nuke
 
-go 1.14
+go 1.15
 
 require (
 	github.com/Matt-Gleich/desktop v1.2.3
@@ -12,7 +12,7 @@ require (
 	github.com/mattn/go-colorable v0.1.7 // indirect
 	github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e // indirect
 	github.com/wayneashleyberry/truecolor v1.0.0
-	golang.org/x/sys v0.0.0-20200810151505-1b9f1253b3ed // indirect
+	golang.org/x/sys v0.0.0-20200817155316-9781c653f443 // indirect
 	gopkg.in/check.v1 v1.0.0-20200227125254-8fa46927fb4f // indirect
 	gopkg.in/yaml.v3 v3.0.0-20200615113413-eeeca48fe776
 )
