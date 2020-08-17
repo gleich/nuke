@@ -36,7 +36,7 @@ func CheckForUpdate() {
 		statuser.Error("Failed to get latest version from GitHub", err, 1)
 	}
 
-	if result["tag_name"] != "v4.3.1" {
+	if result["tag_name"] != "v4.3.2" {
 		fmt.Println("THERE IS AN UPDATE AVALIABLE")
 		fmt.Println(`PLEASE UPDATE ASAP
 		`)
