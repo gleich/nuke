@@ -1,0 +1,35 @@
+commit_message: 🔄 Update file via sync
+replace:
+  - before: project_name
+    after: nuke
+  - before: project_description
+    after: ☢️ Force quit all applications with one terminal command.
+  - before: github_username
+    after: Matt-Gleich
+  - before: project_author_email
+    after: matthewgleich@gmail.com
+  - before: docker_username
+    after: mattgleich
+files:
+  - path: .gitignore
+    source: https://github.com/Matt-Gleich/go_template/blob/master/.gitignore
+  - path: LICENSE.md
+    source: https://github.com/Matt-Gleich/go_template/blob/master/LICENSE.md
+  - path: dev.lint.Dockerfile
+    source: https://github.com/Matt-Gleich/go_template/blob/master/dev.lint.Dockerfile
+  - path: CONTRIBUTING.md
+    source: https://github.com/Matt-Gleich/go_template/blob/master/CONTRIBUTING.md
+  - path: CODE_OF_CONDUCT.md
+    source: https://github.com/Matt-Gleich/go_template/blob/master/CODE_OF_CONDUCT.md
+  - path: .github/PULL_REQUEST_TEMPLATE.md
+    source: https://github.com/Matt-Gleich/go_template/blob/master/.github/PULL_REQUEST_TEMPLATE.md
+  - path: .github/ISSUE_TEMPLATE/bug_report.md
+    source: https://github.com/Matt-Gleich/go_template/blob/master/.github/ISSUE_TEMPLATE/bug_report.md
+  - path: .github/ISSUE_TEMPLATE/feature_request.md
+    source: https://github.com/Matt-Gleich/go_template/blob/master/.github/ISSUE_TEMPLATE/feature_request.md
+  - path: .github/workflows/lint.yml
+    source: https://github.com/Matt-Gleich/go_template/blob/master/.github/workflows/lint.yml
+  - path: .github/workflows/release.yml
+    source: https://github.com/Matt-Gleich/go_template/blob/master/.github/workflows/release.yml
+  - path: .github/workflows/contributors.yml
+    source: https://github.com/Matt-Gleich/go_template/blob/master/.github/workflows/contributors.yml
