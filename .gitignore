@@ -1,6 +1,7 @@
-dist/*
+# goreleaser
+dist/
 
-# macos
+# MacOS Meta Data
 .DS_Store
 
 # Binaries for programs and plugins
