@@ -3,7 +3,7 @@ replace:
   - before: project_name
     after: nuke
   - before: project_description
-    after: ☢️ Force quit all applications with one terminal command.
+    after: ☢️ Force quit all applications with one terminal command
   - before: github_username
     after: Matt-Gleich
   - before: project_author_email
