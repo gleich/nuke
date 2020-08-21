@@ -4,7 +4,7 @@ FROM golangci/golangci-lint:v1.30.0
 LABEL maintainer="matthewgleich@gmail.com"
 LABEL description="☢️ Force quit all applications with one terminal command"
 
-# Copying over all the files
+# Copying over files
 COPY . /usr/src/app
 WORKDIR /usr/src/app
 
@@ -21,7 +21,7 @@ RUN go get ./...
 RUN go build -o goreleaser .
 RUN mv goreleaser /usr/bin
 
-# Install make
+# Installing make
 RUN apt-get update && apt-get install make=4.2.1-1.2 -y --no-install-recommends \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
