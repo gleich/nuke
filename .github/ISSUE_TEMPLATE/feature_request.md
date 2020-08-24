@@ -1,19 +1,17 @@
 ---
-name: Feature request
-about: Suggest an idea for nuke
+name: '🚀 Feature request'
+about: Request a feature
 title: ''
-labels: 'enhancement'
+labels: enhancement
 assignees: '@Matt-Gleich'
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+<!--
+Before making this issue please make sure this issue doesn't already exist!
+-->
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+## Description
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
-
-**Additional context**
-Add any other context or screenshots about the feature request
+<!--
+What is the feature you have in mind?
+-->

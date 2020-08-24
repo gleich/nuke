@@ -1,31 +1,31 @@
 ---
-name: Bug report
-about: Create a report to help us improve
+name: '🐛 Bug Report'
+about: Bug report
 title: ''
-labels: 'bug'
+labels: bug
 assignees: '@Matt-Gleich'
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+<!--
+Before making this issue please make sure this issue doesn't already exist!
+-->
 
-**To Reproduce**
-What command or actions did you take to produce this error?
+## Description
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+<!--
+What is the problem you are having?
+-->
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+## Steps to reproduce
 
-**Meta Information:**
+<!--
+How did this problem come up? These steps will allow us to reproduce
+the issue ourselves
+-->
 
-- OS:
-- OS Version:
-- `nuke` Version:
+## Logs/Screenshots
 
-**Error Output**
-Put the output of the error if one here.
-
-**Additional context**
-Add any other context about the problem here.
+<!--
+Please share any logs from the console or screenshots that you think
+might be helpful in debugging this issue
+-->
