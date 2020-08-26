@@ -1,3 +1,4 @@
+# SOURCED FROM: https://github.com/Matt-Gleich/Matt-Gleich/blob/master/standard_documents/workflows/fsync.yml
 name: fsync
 
 on:
@@ -5,7 +6,7 @@ on:
     branches:
       - master
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '*/10 * * * *' # Run every 10 minutes
 
 jobs:
   file_sync:
