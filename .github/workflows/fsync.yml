@@ -17,3 +17,4 @@ jobs:
         uses: Matt-Gleich/gh_fsync@master
         with:
           PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          GITHUB_USERNAME: Matt-Gleich
