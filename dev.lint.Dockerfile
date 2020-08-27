@@ -1,8 +1,8 @@
 FROM golangci/golangci-lint:v1.30.0
 
 # Meta data
-LABEL maintainer="matthewgleich@gmail.com"
-LABEL description="☢️ Force quit all applications with one terminal command"
+LABEL maintainer="project_author_email"
+LABEL description="project_description"
 
 # Copying over files
 COPY . /usr/src/app
