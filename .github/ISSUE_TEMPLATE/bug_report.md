@@ -1,9 +1,13 @@
+<!-- SOURCED FROM: https://github.com/Matt-Gleich/Matt-Gleich/blob/master/standard_documents/templates/issue_bug.md -->
+
 ---
+
 name: '🐛 Bug Report'
 about: Bug report
 title: ''
 labels: bug
 assignees: '@Matt-Gleich'
+
 ---
 
 <!--

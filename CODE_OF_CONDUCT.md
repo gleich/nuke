@@ -1,3 +1,5 @@
+<!-- SOURCED FROM: https://github.com/Matt-Gleich/Matt-Gleich/blob/master/standard_documents/CODE_OF_CONDUCT.md -->
+
 # Contributor Covenant Code of Conduct
 
 ## Our Pledge

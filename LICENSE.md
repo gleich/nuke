@@ -1,3 +1,5 @@
+<!-- SOURCED FROM: https://github.com/Matt-Gleich/Matt-Gleich/blob/master/standard_documents/licenses/MIT_LICENSE.md -->
+
 The MIT License (MIT)
 
 Copyright (c) 2020 Matthew Gleich
