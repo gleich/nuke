@@ -23,7 +23,7 @@ func CheckForUpdate() {
 	s.Stop()
 	if isOutdated {
 		fmt.Println("\nPLEASE UPDATE TO NEW VERSION", version)
-		fmt.Println("Get update from", repoURL)
+		fmt.Println("Get update from", repoURL, "or with your package manager")
 		fmt.Println()
 	}
 }
