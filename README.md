@@ -35,7 +35,7 @@ Just run `nuke` and answer the one question to confirm. A window will pop up whe
 You can configure a list of apps you want nuke to ignore by creating a directory called `nuke` inside the `~/.config/` directory and then a file inside of it called `config.yml`. Below is an example config:
 
 ```yml
-ignored:
+ignoredApps:
   - Google Chrome
   - Terminal
 ```
@@ -58,10 +58,10 @@ _Ignores Music, Slack, and Notion_
 
 ### 🚀 Update Checks
 
-By default nuke checks if there is an update every time you run it only on Linux. If you want to turn it off add the following to your config:
+By default nuke checks if there is an update every time you run it. If you want to turn it off add the following to your config:
 
 ```yaml
-ignoredApps: true
+ignoredUpdates: true
 ```
 
 ## 🙋‍♀️🙋‍♂️ Contributing

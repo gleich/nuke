@@ -36,7 +36,7 @@ func main() {
 
 	output.Title()
 
-	if operatingSystem == "linux" && !configContents.IgnoreUpdates {
+	if !configContents.IgnoreUpdates {
 		version.CheckForUpdate()
 	}
 

@@ -1,11 +1,10 @@
 package version
 
 import (
-	"encoding/json"
 	"fmt"
-	"net/http"
 	"time"
 
+	"github.com/Matt-Gleich/new_release"
 	"github.com/Matt-Gleich/statuser/v2"
 	"github.com/briandowns/spinner"
 )
@@ -16,30 +15,15 @@ func CheckForUpdate() {
 	s.Suffix = " Checking for update"
 	s.Start()
 
-	// Checking network connection
-	checkResp, err := http.Get("http://clients3.google.com/generate_204")
+	const repoURL = "https://github.com/Matt-Gleich/nuke"
+	isOutdated, version, err := new_release.Check("v4.3.2", repoURL)
 	if err != nil {
-		return
-	}
-	defer checkResp.Body.Close()
-
-	// Making the actual request
-	resp, err := http.Get("https://api.github.com/repos/Matt-Gleich/nuke/releases/latest")
-	if err != nil {
-		statuser.Error("Failed to get latest version from GitHub", err, 1)
-	}
-	defer resp.Body.Close()
-
-	var result map[string]interface{}
-	err = json.NewDecoder(resp.Body).Decode(&result)
-	if err != nil {
-		statuser.Error("Failed to get latest version from GitHub", err, 1)
-	}
-
-	if result["tag_name"] != "v4.3.2" {
-		fmt.Println("THERE IS AN UPDATE AVALIABLE")
-		fmt.Println(`PLEASE UPDATE ASAP
-		`)
+		statuser.Error("Failed to get current version number", err, 1)
 	}
 	s.Stop()
+	if isOutdated {
+		fmt.Println("\nPLEASE UPDATE TO NEW VERSION", version)
+		fmt.Println("Get update from", repoURL)
+		fmt.Println()
+	}
 }

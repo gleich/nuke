@@ -12,7 +12,7 @@ var path = "/.config/nuke/"
 
 // Config for nuke
 type Conf struct {
-	IgnoreUpdates bool     `yaml:"ignoreUpdates"`
+	IgnoreUpdates bool     `yaml:"ignoredUpdates"`
 	IgnoredApps   []string `yaml:"ignoredApps"`
 }
 
