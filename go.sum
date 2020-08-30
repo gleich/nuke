@@ -1,7 +1,5 @@
 github.com/Matt-Gleich/desktop v1.2.3 h1:mC525TDcTt9iiFRLyl0lfBqMvkuUO0Xsoyro9rZRsjs=
 github.com/Matt-Gleich/desktop v1.2.3/go.mod h1:JgcgYl8DoY2gvTHUvkucxWUkdoEYiQEuj5/wtC9nojI=
-github.com/Matt-Gleich/new_release v0.0.0-20200830163408-c2e9db9e1d76 h1:QJGSKizdEGOobDgokB1CKrPLY8fKFCGvXCgRUipmfxE=
-github.com/Matt-Gleich/new_release v0.0.0-20200830163408-c2e9db9e1d76/go.mod h1:GBqRiwEtOaE9OmjFIa9hZzhG4gra006TSh2vH6kzcvw=
 github.com/Matt-Gleich/new_release v0.0.0-20200830211545-7e97b8b912a6 h1:le84OtIw6snJ5iAiqvXJ/bmoSYpbTVnhkE4gUH5dnHg=
 github.com/Matt-Gleich/new_release v0.0.0-20200830211545-7e97b8b912a6/go.mod h1:GBqRiwEtOaE9OmjFIa9hZzhG4gra006TSh2vH6kzcvw=
 github.com/Matt-Gleich/statuser/v2 v2.0.1 h1:ty5uZt2vvEdC+2Sk/fuMROvuGf6y/KtfkfV+u/FQBxo=
@@ -66,8 +64,6 @@ golang.org/x/sys v0.0.0-20200116001909-b77594299b42/go.mod h1:h1NjWce9XRLGQEsW7w
 golang.org/x/sys v0.0.0-20200223170610-d5e6a3e2c0ae/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20200620081246-981b61492c35 h1:wb/9mP8eUAmHfkM8RmpeLq6nUA7c2i5+bQOtcDftjaE=
 golang.org/x/sys v0.0.0-20200620081246-981b61492c35/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
-golang.org/x/sys v0.0.0-20200817155316-9781c653f443 h1:X18bCaipMcoJGm27Nv7zr4XYPKGUy92GtqboKC2Hxaw=
-golang.org/x/sys v0.0.0-20200817155316-9781c653f443/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20200828194041-157a740278f4 h1:kCCpuwSAoYJPkNc6x0xT9yTtV4oKtARo4RGBQWOfg9E=
 golang.org/x/sys v0.0.0-20200828194041-157a740278f4/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405 h1:yhCVgyC4o1eVCa2tZl7eS0r+SDo693bJlVdllGtEeKM=
