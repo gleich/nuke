@@ -4,8 +4,8 @@ import (
 	"sort"
 	"strings"
 
+	"github.com/AlecAivazis/survey/v2"
 	"github.com/Matt-Gleich/statuser/v2"
-	"github.com/manifoldco/promptui"
 )
 
 // Ask the user what terminal they are executing from
@@ -24,27 +24,31 @@ func ExecutingTerm(runningApps, ignoredApps []string) []string {
 		}
 	}
 	sort.Strings(cleanedApps)
-	prompt := promptui.Select{
-		Label: "Running nuke from (what app your currently using)",
-		Items: cleanedApps,
-		Size:  10,
-	}
-	_, program, err := prompt.Run()
+	program := struct {
+		Program string `survey:"program"`
+	}{}
+	err := survey.Ask([]*survey.Question{{
+		Name: "program",
+		Prompt: &survey.Select{
+			Message: "Running nuke from (what app your currently using)",
+			Options: cleanedApps,
+		},
+	}}, &program)
 	if err != nil {
-		statuser.Error("Failed to get executing terminal", err, 1)
+		statuser.Error("Failed to get running terminal", err, 1)
 	}
 
 	var foundRunning bool
 	cleanedApps2 := []string{}
 	for _, app := range cleanedApps {
-		if strings.Trim(app, "\n") != strings.Trim(program, "\n") {
+		if strings.Trim(app, "\n") != strings.Trim(program.Program, "\n") {
 			cleanedApps2 = append(cleanedApps2, app)
 		} else {
 			foundRunning = true
 		}
 	}
 	if !foundRunning {
-		statuser.ErrorMsg("\n"+strings.TrimSuffix(program, "\n")+" is not open", 1)
+		statuser.ErrorMsg("\n"+strings.TrimSuffix(program.Program, "\n")+" is not open", 1)
 	}
 	return cleanedApps2
 }
