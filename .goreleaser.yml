@@ -22,7 +22,7 @@ brews:
       owner: Matt-Gleich
       name: homebrew-taps
     folder: Formula
-    homepage: 'https://mattglei.ch'
+    homepage: 'https://github.com/Matt-Gleich/nuke'
     description: '☢️ Force quit all applications with one terminal command'
     commit_author:
       name: Matt-Gleich
