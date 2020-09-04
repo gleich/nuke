@@ -1,4 +1,3 @@
-# SOURCED FROM: https://github.com/Matt-Gleich/Matt-Gleich/blob/master/standard_documents/workflows/fsync.yml
 name: fsync
 
 on:

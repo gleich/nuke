@@ -1,5 +1,3 @@
-<!-- SOURCED FROM: https://github.com/Matt-Gleich/Matt-Gleich/blob/master/standard_documents/templates/pull_request.md -->
-
 ## Description
 
 <!--
