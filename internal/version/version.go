@@ -16,7 +16,7 @@ func CheckForUpdate() {
 	s.Start()
 
 	const repoURL = "https://github.com/Matt-Gleich/nuke"
-	isOutdated, version, err := release.Check("v5.0.0", repoURL)
+	isOutdated, version, err := release.Check("v5.0.1", repoURL)
 	if err != nil {
 		statuser.Error("Failed to get current version number", err, 1)
 	}
