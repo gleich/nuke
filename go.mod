@@ -5,7 +5,7 @@ go 1.15
 require (
 	github.com/AlecAivazis/survey/v2 v2.1.1
 	github.com/Matt-Gleich/desktop v1.2.3
-	github.com/Matt-Gleich/new_release v0.0.0-20200830211545-7e97b8b912a6
+	github.com/Matt-Gleich/release v0.0.0-20200908174151-313f50d70056
 	github.com/Matt-Gleich/statuser/v2 v2.0.1
 	github.com/briandowns/spinner v1.11.1
 	github.com/kr/text v0.2.0 // indirect

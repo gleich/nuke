@@ -2,8 +2,8 @@ github.com/AlecAivazis/survey/v2 v2.1.1 h1:LEMbHE0pLj75faaVEKClEX1TM4AJmmnOh9eim
 github.com/AlecAivazis/survey/v2 v2.1.1/go.mod h1:9FJRdMdDm8rnT+zHVbvQT2RTSTLq0Ttd6q3Vl2fahjk=
 github.com/Matt-Gleich/desktop v1.2.3 h1:mC525TDcTt9iiFRLyl0lfBqMvkuUO0Xsoyro9rZRsjs=
 github.com/Matt-Gleich/desktop v1.2.3/go.mod h1:JgcgYl8DoY2gvTHUvkucxWUkdoEYiQEuj5/wtC9nojI=
-github.com/Matt-Gleich/new_release v0.0.0-20200830211545-7e97b8b912a6 h1:le84OtIw6snJ5iAiqvXJ/bmoSYpbTVnhkE4gUH5dnHg=
-github.com/Matt-Gleich/new_release v0.0.0-20200830211545-7e97b8b912a6/go.mod h1:GBqRiwEtOaE9OmjFIa9hZzhG4gra006TSh2vH6kzcvw=
+github.com/Matt-Gleich/release v0.0.0-20200908174151-313f50d70056 h1:0xmKi+cwTKnQ2MsQlb8vr+EjYF0eEPPOmAoshLUqk9c=
+github.com/Matt-Gleich/release v0.0.0-20200908174151-313f50d70056/go.mod h1:bXuZW6gUZgF3PlxKD/PWBXsnvAPnrScC+scuBEGOUUw=
 github.com/Matt-Gleich/statuser/v2 v2.0.1 h1:ty5uZt2vvEdC+2Sk/fuMROvuGf6y/KtfkfV+u/FQBxo=
 github.com/Matt-Gleich/statuser/v2 v2.0.1/go.mod h1:S1XWSMcVPUzej6pP8MrU/+CJd8oYusRkPFQJPXSwJ8Y=
 github.com/Netflix/go-expect v0.0.0-20180615182759-c93bf25de8e8 h1:xzYJEypr/85nBpB11F9br+3HUrpgb+fcm5iADzXXYEw=
@@ -47,6 +47,7 @@ github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e/go.mod h1:zD1mROLA
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
+github.com/stretchr/testify v1.2.1 h1:52QO5WkIUcHGIR7EnGagH88x1bUzqGXTC5/1bDTUQ7U=
 github.com/stretchr/testify v1.2.1/go.mod h1:a8OnRcib4nhh0OaRAV+Yts87kKdq0PP7pXfy6kDkUVs=
 github.com/stretchr/testify v1.6.1 h1:hDPOHmpOpP40lSULcqw7IrRb/u7w6RpDC9399XyoNd0=
 github.com/stretchr/testify v1.6.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
