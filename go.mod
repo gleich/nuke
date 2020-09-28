@@ -6,10 +6,9 @@ require (
 	github.com/AlecAivazis/survey/v2 v2.1.1
 	github.com/Matt-Gleich/desktop v1.2.3
 	github.com/Matt-Gleich/release v0.0.0-20200908174151-313f50d70056
-	github.com/Matt-Gleich/statuser/v2 v2.0.1
+	github.com/Matt-Gleich/statuser/v2 v2.3.1
 	github.com/briandowns/spinner v1.11.1
 	github.com/kr/text v0.2.0 // indirect
-	github.com/mattn/go-colorable v0.1.7 // indirect
 	github.com/mgutz/ansi v0.0.0-20200706080929-d51e80ef957d // indirect
 	github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e // indirect
 	github.com/wayneashleyberry/truecolor v1.0.0
