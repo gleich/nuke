@@ -1,4 +1,4 @@
-<!-- DO NOT REMOVE - contributor_list:data:start:["Matt-Gleich"]:end -->
+<!-- DO NOT REMOVE - contributor_list:data:start:["Matt-Gleich", "dependabot-preview[bot]"]:end -->
 
 ![Title Example](title.gif)
 
@@ -69,9 +69,11 @@ ignoredUpdates: true
 All contributions are welcome! Just make sure that its not an already existing issue or pull request.
 
 <!-- DO NOT REMOVE - contributor_list:start -->
-
 ## 👥 Contributors
 
+
 - **[@Matt-Gleich](https://github.com/Matt-Gleich)**
+
+- **[@dependabot-preview[bot]](https://github.com/apps/dependabot-preview)**
 
 <!-- DO NOT REMOVE - contributor_list:end -->
