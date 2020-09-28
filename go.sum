@@ -4,8 +4,6 @@ github.com/Matt-Gleich/desktop v1.2.3 h1:mC525TDcTt9iiFRLyl0lfBqMvkuUO0Xsoyro9rZ
 github.com/Matt-Gleich/desktop v1.2.3/go.mod h1:JgcgYl8DoY2gvTHUvkucxWUkdoEYiQEuj5/wtC9nojI=
 github.com/Matt-Gleich/release v0.0.0-20200908174151-313f50d70056 h1:0xmKi+cwTKnQ2MsQlb8vr+EjYF0eEPPOmAoshLUqk9c=
 github.com/Matt-Gleich/release v0.0.0-20200908174151-313f50d70056/go.mod h1:bXuZW6gUZgF3PlxKD/PWBXsnvAPnrScC+scuBEGOUUw=
-github.com/Matt-Gleich/statuser/v2 v2.0.1 h1:ty5uZt2vvEdC+2Sk/fuMROvuGf6y/KtfkfV+u/FQBxo=
-github.com/Matt-Gleich/statuser/v2 v2.0.1/go.mod h1:S1XWSMcVPUzej6pP8MrU/+CJd8oYusRkPFQJPXSwJ8Y=
 github.com/Matt-Gleich/statuser/v2 v2.3.1 h1:NpyKd5F9a2D7Wcju63hQ+RYPo5lk/RbbCnOMBU7YXZM=
 github.com/Matt-Gleich/statuser/v2 v2.3.1/go.mod h1:eGYKO1S7SIJhXqVSSE/PPOXQ0ceMP27wA9ePo5HYhHY=
 github.com/Netflix/go-expect v0.0.0-20180615182759-c93bf25de8e8 h1:xzYJEypr/85nBpB11F9br+3HUrpgb+fcm5iADzXXYEw=
@@ -32,8 +30,6 @@ github.com/kr/text v0.2.0 h1:5Nx0Ya0ZqY2ygV366QzturHI13Jq95ApcVaJBhpS+AY=
 github.com/kr/text v0.2.0/go.mod h1:eLer722TekiGuMkidMxC/pM04lWEeraHUUmBw8l2grE=
 github.com/mattn/go-colorable v0.1.2/go.mod h1:U0ppj6V5qS13XJ6of8GYAs25YV2eR4EVcfRqFIhoBtE=
 github.com/mattn/go-colorable v0.1.4/go.mod h1:U0ppj6V5qS13XJ6of8GYAs25YV2eR4EVcfRqFIhoBtE=
-github.com/mattn/go-colorable v0.1.6 h1:6Su7aK7lXmJ/U79bYtBjLNaha4Fs1Rg9plHpcH+vvnE=
-github.com/mattn/go-colorable v0.1.6/go.mod h1:u6P/XSegPjTcexA+o6vUJrdnUu04hMope9wVRipJSqc=
 github.com/mattn/go-colorable v0.1.7 h1:bQGKb3vps/j0E9GfJQ03JyhRuxsvdAanXlT9BTw3mdw=
 github.com/mattn/go-colorable v0.1.7/go.mod h1:u6P/XSegPjTcexA+o6vUJrdnUu04hMope9wVRipJSqc=
 github.com/mattn/go-isatty v0.0.8/go.mod h1:Iq45c/XA43vh69/j3iqttzPXn0bhXyGjM0Hdxcsrc5s=
@@ -70,8 +66,6 @@ golang.org/x/sys v0.0.0-20190530182044-ad28b68e88f1/go.mod h1:h1NjWce9XRLGQEsW7w
 golang.org/x/sys v0.0.0-20191026070338-33540a1f6037/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20200116001909-b77594299b42/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20200223170610-d5e6a3e2c0ae/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
-golang.org/x/sys v0.0.0-20200620081246-981b61492c35 h1:wb/9mP8eUAmHfkM8RmpeLq6nUA7c2i5+bQOtcDftjaE=
-golang.org/x/sys v0.0.0-20200620081246-981b61492c35/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20200625212154-ddb9806d33ae/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20200831180312-196b9ba8737a h1:i47hUS795cOydZI4AwJQCKXOr4BvxzvikwDoDtHhP2Y=
 golang.org/x/sys v0.0.0-20200831180312-196b9ba8737a/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
