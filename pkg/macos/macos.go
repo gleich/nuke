@@ -4,7 +4,7 @@ import (
 	"os/exec"
 	"time"
 
-	"github.com/Matt-Gleich/nuke/internal/output"
+	"github.com/Matt-Gleich/nuke/pkg/output"
 	"github.com/Matt-Gleich/statuser/v2"
 	"github.com/briandowns/spinner"
 )

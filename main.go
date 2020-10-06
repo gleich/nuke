@@ -7,11 +7,11 @@ import (
 	"time"
 
 	"github.com/Matt-Gleich/desktop"
-	"github.com/Matt-Gleich/nuke/internal/config"
-	"github.com/Matt-Gleich/nuke/internal/input"
-	"github.com/Matt-Gleich/nuke/internal/macos"
-	"github.com/Matt-Gleich/nuke/internal/output"
-	"github.com/Matt-Gleich/nuke/internal/version"
+	"github.com/Matt-Gleich/nuke/pkg/config"
+	"github.com/Matt-Gleich/nuke/pkg/input"
+	"github.com/Matt-Gleich/nuke/pkg/macos"
+	"github.com/Matt-Gleich/nuke/pkg/output"
+	"github.com/Matt-Gleich/nuke/pkg/version"
 	"github.com/Matt-Gleich/statuser/v2"
 	"github.com/briandowns/spinner"
 )
