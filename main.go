@@ -17,6 +17,7 @@ import (
 )
 
 func main() {
+	statuser.Emojis = false
 	operatingSystem := runtime.GOOS
 	if operatingSystem != "darwin" && operatingSystem != "linux" {
 		statuser.ErrorMsg("This application only works on macOS and linux", 1)
@@ -87,10 +88,12 @@ func main() {
 			}
 		}
 		s2.Stop()
-		output.Success("💥 Quitted " + app)
+		statuser.Success("Quitted " + app)
 	}
 	if operatingSystem == "darwin" {
 		macos.CloseFinder()
 	}
-	output.Success("\n🤯 All Applications Quitted!")
+
+	fmt.Println()
+	statuser.Success("All Applications Quitted! Have a good day :)")
 }

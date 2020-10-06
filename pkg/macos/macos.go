@@ -4,7 +4,6 @@ import (
 	"os/exec"
 	"time"
 
-	"github.com/Matt-Gleich/nuke/pkg/output"
 	"github.com/Matt-Gleich/statuser/v2"
 	"github.com/briandowns/spinner"
 )
@@ -19,5 +18,5 @@ func CloseFinder() {
 		statuser.Error("Failed to close all finder windows", err, 1)
 	}
 	s.Stop()
-	output.Success("💥 Closed all Finder windows")
+	statuser.Success("Closed all Finder windows")
 }
