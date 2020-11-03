@@ -3,7 +3,7 @@ module github.com/Matt-Gleich/nuke
 go 1.15
 
 require (
-	github.com/AlecAivazis/survey/v2 v2.1.1
+	github.com/AlecAivazis/survey/v2 v2.2.0
 	github.com/Matt-Gleich/desktop v1.2.3
 	github.com/Matt-Gleich/release v0.0.0-20200923181836-9c0204a7039e
 	github.com/Matt-Gleich/statuser/v2 v2.4.0
