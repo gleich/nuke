@@ -11,6 +11,7 @@ import (
 // Ask the user what terminal they are executing from
 func ExecutingTerm(runningApps, ignoredApps []string) []string {
 	cleanedApps := []string{}
+
 	// Removing ignored applications
 	for _, app := range runningApps {
 		var isIgnored bool
@@ -23,15 +24,18 @@ func ExecutingTerm(runningApps, ignoredApps []string) []string {
 			cleanedApps = append(cleanedApps, app)
 		}
 	}
+
 	sort.Strings(cleanedApps)
+
 	program := struct {
 		Program string `survey:"program"`
 	}{}
 	err := survey.Ask([]*survey.Question{{
 		Name: "program",
 		Prompt: &survey.Select{
-			Message: "Running nuke from (what app your currently using)",
-			Options: cleanedApps,
+			Message:  "Running nuke from (what app your currently using)",
+			Options:  cleanedApps,
+			PageSize: 25,
 		},
 	}}, &program)
 	if err != nil {
