@@ -11,7 +11,7 @@ import (
 // Close all open finder windows
 func CloseFinder() {
 	s := spinner.New(spinner.CharSets[13], 30*time.Millisecond)
-	s.Suffix = " Closing finder windows"
+	s.Suffix = " Closing Finder windows"
 	s.Start()
 	err := exec.Command("osascript", "-e", `tell application "Finder" to close windows`).Run()
 	if err != nil {
