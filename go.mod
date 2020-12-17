@@ -16,7 +16,7 @@ require (
 	github.com/kr/text v0.2.0 // indirect
 	github.com/mgutz/ansi v0.0.0-20200706080929-d51e80ef957d // indirect
 	github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e // indirect
-	github.com/wayneashleyberry/truecolor v1.0.0
+	github.com/wayneashleyberry/truecolor v1.0.1
 	golang.org/x/crypto v0.0.0-20201016220609-9e8e0b390897 // indirect
 	golang.org/x/sys v0.0.0-20201101102859-da207088b7d1 // indirect
 	golang.org/x/text v0.3.4 // indirect
