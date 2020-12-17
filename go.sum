@@ -67,8 +67,7 @@ github.com/stretchr/testify v1.6.1 h1:hDPOHmpOpP40lSULcqw7IrRb/u7w6RpDC9399XyoNd
 github.com/stretchr/testify v1.6.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
 github.com/tj/assert v0.0.3 h1:Df/BlaZ20mq6kuai7f5z2TvPFiwC3xaWJSDQNiIS3Rk=
 github.com/tj/assert v0.0.3/go.mod h1:Ne6X72Q+TB1AteidzQncjw9PabbMp4PBMZ1k+vd1Pvk=
-github.com/wayneashleyberry/truecolor v1.0.0 h1:LLo8HWexMssG7r/f9KUwHe1DC8AR7ZWnRTwDxRFVUN8=
-github.com/wayneashleyberry/truecolor v1.0.0/go.mod h1:EW2t+p4Ox2UhK82yOLRvHzhR4rl6UYZUL6h0iILCP2E=
+github.com/wayneashleyberry/truecolor v1.0.1 h1:REnJBycjnvg0AFErbLx2GCmLLar8brlqm62kOKnRsGs=
 github.com/wayneashleyberry/truecolor v1.0.1/go.mod h1:fyL3jRES70g94n+Eu+XLhXYvcseza55ph8zlkmUKW7Q=
 golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
 golang.org/x/crypto v0.0.0-20190530122614-20be4c3c3ed5 h1:8dUaAV7K4uHsF56JQWkprecIQKdPHtR9jCHF5nB8uzc=
