@@ -32,7 +32,7 @@ Just run `nuke` and answer the one question to confirm. A window will pop up whe
 
 ### 🙈 Ignoring apps
 
-You can configure a list of apps you want nuke to ignore by creating a directory called `nuke` inside the `~/.config/` directory and then a file inside of it called `config.yml`. Below is an example config:
+You can configure a list of apps you want nuke to ignore in `~/.config/nuke/config.yml`. You will need to create this file. Below is an example config:
 
 ```yml
 ignoredApps:
@@ -69,8 +69,8 @@ ignoredUpdates: true
 All contributions are welcome! Just make sure that its not an already existing issue or pull request.
 
 <!-- DO NOT REMOVE - contributor_list:start -->
-## 👥 Contributors
 
+## 👥 Contributors
 
 - **[@Matt-Gleich](https://github.com/Matt-Gleich)**
 
