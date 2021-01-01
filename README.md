@@ -14,7 +14,7 @@
 
 ### 🍎 MacOS
 
-Simply run `brew tap Matt-Gleich/homebrew-taps` and then `brew install nuke`
+Simply run `brew install Matt-Gleich/taps/nuke`
 
 ### 🐧 Linux
 
