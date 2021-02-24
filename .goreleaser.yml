@@ -27,3 +27,4 @@ brews:
     commit_author:
       name: Matt-Gleich
       email: matthewgleich@gmail.com
+    install: bin.install "nuke"
