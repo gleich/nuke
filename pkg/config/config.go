@@ -1,6 +1,7 @@
 package config
 
 import (
+	"io/ioutil"
 	"os"
 
 	"github.com/Matt-Gleich/statuser/v2"
@@ -42,7 +43,7 @@ func Exists() bool {
 
 // Read from the config file
 func Read(conf *Conf) *Conf {
-	contents, err := os.ReadFile(path)
+	contents, err := ioutil.ReadFile(path)
 	if err != nil {
 		statuser.Error("Failed to read from config in\n\t"+path, err, 1)
 	}
