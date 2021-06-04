@@ -4,7 +4,7 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/Matt-Gleich/statuser/v2"
+	"github.com/gleich/statuser/v2"
 	"gopkg.in/yaml.v3"
 )
 

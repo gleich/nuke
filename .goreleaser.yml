@@ -1,6 +1,6 @@
 release:
   github:
-    owner: Matt-Gleich
+    owner: gleich
     name: nuke
   prerelease: auto
 before:
@@ -19,12 +19,12 @@ builds:
       - 7
 brews:
   - tap:
-      owner: Matt-Gleich
+      owner: gleich
       name: homebrew-taps
     folder: Formula
-    homepage: 'https://github.com/Matt-Gleich/nuke'
+    homepage: 'https://github.com/gleich/nuke'
     description: '☢️ Force quit all applications with one terminal command'
     commit_author:
-      name: Matt-Gleich
+      name: gleich
       email: matthewgleich@gmail.com
     install: bin.install "nuke"

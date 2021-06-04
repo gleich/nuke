@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/Matt-Gleich/release"
-	"github.com/Matt-Gleich/statuser/v2"
+	"github.com/gleich/release"
+	"github.com/gleich/statuser/v2"
 	"github.com/briandowns/spinner"
 )
 
@@ -15,7 +15,7 @@ func CheckForUpdate() {
 	s.Suffix = " Checking for update"
 	s.Start()
 
-	const repoURL = "https://github.com/Matt-Gleich/nuke"
+	const repoURL = "https://github.com/gleich/nuke"
 	isOutdated, version, err := release.Check("v5.1.2", repoURL)
 	if err != nil {
 		statuser.Error("Failed to get current version number", err, 1)

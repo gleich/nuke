@@ -1,16 +1,15 @@
-module github.com/Matt-Gleich/nuke
+module github.com/gleich/nuke
 
 go 1.16
 
 require (
 	github.com/AlecAivazis/survey/v2 v2.2.9
-	github.com/Matt-Gleich/desktop v1.2.3
-	github.com/Matt-Gleich/release v0.0.0-20201031213446-c4dd80460118
-	github.com/Matt-Gleich/statuser/v2 v2.4.0
 	github.com/Netflix/go-expect v0.0.0-20201103021302-07164a2e4b01 // indirect
 	github.com/briandowns/spinner v1.12.0
 	github.com/creack/pty v1.1.11 // indirect
-	github.com/fatih/color v1.10.0 // indirect
+	github.com/gleich/desktop v1.2.4
+	github.com/gleich/release v0.0.0-20210604035540-68b9816a6144
+	github.com/gleich/statuser/v2 v2.4.1
 	github.com/hinshun/vt10x v0.0.0-20180809195222-d55458df857c // indirect
 	github.com/kr/pty v1.1.8 // indirect
 	github.com/kr/text v0.2.0 // indirect

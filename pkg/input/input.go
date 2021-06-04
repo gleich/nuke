@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	"github.com/AlecAivazis/survey/v2"
-	"github.com/Matt-Gleich/statuser/v2"
+	"github.com/gleich/statuser/v2"
 )
 
 // Ask the user what terminal they are executing from

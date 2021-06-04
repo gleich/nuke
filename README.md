@@ -1,12 +1,12 @@
-<!-- DO NOT REMOVE - contributor_list:data:start:["Matt-Gleich", "dependabot-preview[bot]", "KhushrajRathod"]:end -->
+<!-- DO NOT REMOVE - contributor_list:data:start:["gleich", "dependabot-preview[bot]", "KhushrajRathod"]:end -->
 
 ![Title Example](title.gif)
 
-# nuke ![GitHub release (latest by date)](https://img.shields.io/github/v/release/Matt-Gleich/nuke)
+# nuke ![GitHub release (latest by date)](https://img.shields.io/github/v/release/gleich/nuke)
 
-![build](https://github.com/Matt-Gleich/nuke/workflows/build/badge.svg)
-![lint](https://github.com/Matt-Gleich/nuke/workflows/lint/badge.svg)
-![release](https://github.com/Matt-Gleich/nuke/workflows/release/badge.svg)
+![build](https://github.com/gleich/nuke/workflows/build/badge.svg)
+![lint](https://github.com/gleich/nuke/workflows/lint/badge.svg)
+![release](https://github.com/gleich/nuke/workflows/release/badge.svg)
 
 ☢️ Force quit all applications with one terminal command.
 
@@ -14,11 +14,11 @@
 
 ### 🍎 MacOS
 
-Simply run `brew install Matt-Gleich/taps/nuke`
+Simply run `brew install gleich/taps/nuke`
 
 ### 🐧 Linux
 
-Download the binary from the [releases page](https://github.com/Matt-Gleich/nuke/releases) and copy it to your desired location.
+Download the binary from the [releases page](https://github.com/gleich/nuke/releases) and copy it to your desired location.
 
 #### Requirements
 
@@ -72,7 +72,7 @@ All contributions are welcome! Just make sure that its not an already existing i
 ## 👥 Contributors
 
 
-- **[@Matt-Gleich](https://github.com/Matt-Gleich)**
+- **[@gleich](https://github.com/gleich)**
 
 - **[@dependabot-preview[bot]](https://github.com/apps/dependabot-preview)**
 

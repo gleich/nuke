@@ -4,7 +4,7 @@ import (
 	"os/exec"
 	"time"
 
-	"github.com/Matt-Gleich/statuser/v2"
+	"github.com/gleich/statuser/v2"
 	"github.com/briandowns/spinner"
 )
 

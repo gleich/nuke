@@ -6,13 +6,13 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/Matt-Gleich/desktop"
-	"github.com/Matt-Gleich/nuke/pkg/config"
-	"github.com/Matt-Gleich/nuke/pkg/input"
-	"github.com/Matt-Gleich/nuke/pkg/macos"
-	"github.com/Matt-Gleich/nuke/pkg/output"
-	"github.com/Matt-Gleich/nuke/pkg/version"
-	"github.com/Matt-Gleich/statuser/v2"
+	"github.com/gleich/desktop"
+	"github.com/gleich/nuke/pkg/config"
+	"github.com/gleich/nuke/pkg/input"
+	"github.com/gleich/nuke/pkg/macos"
+	"github.com/gleich/nuke/pkg/output"
+	"github.com/gleich/nuke/pkg/version"
+	"github.com/gleich/statuser/v2"
 	"github.com/briandowns/spinner"
 )
 
