@@ -1,6 +1,7 @@
 package input
 
 import (
+	"os"
 	"sort"
 	"strings"
 
@@ -24,35 +25,41 @@ func ExecutingTerm(runningApps, ignoredApps []string) []string {
 			cleanedApps = append(cleanedApps, app)
 		}
 	}
-
 	sort.Strings(cleanedApps)
 
-	program := struct {
-		Program string `survey:"program"`
-	}{}
-	err := survey.Ask([]*survey.Question{{
-		Name: "program",
-		Prompt: &survey.Select{
-			Message:  "Running nuke from (what app your currently using)",
-			Options:  cleanedApps,
-			PageSize: 25,
-		},
-	}}, &program)
-	if err != nil {
-		statuser.Error("Failed to get running terminal", err, 1)
+	// Automatically select terminal as kitty if $TERM is xterm-kitty
+	var program string
+	for _, app := range runningApps {
+		if app == "kitty" && os.Getenv("TERM") == "xterm-kitty" {
+			statuser.Success("Kitty terminal automatically detected")
+			program = "kitty"
+		}
+	}
+
+	if program == "" {
+		err := survey.AskOne(
+			&survey.Select{
+				Message:  "Running nuke from (what app your currently using)",
+				Options:  cleanedApps,
+				PageSize: 25,
+			},
+			&program)
+		if err != nil {
+			statuser.Error("Failed to get running terminal", err, 1)
+		}
 	}
 
 	var foundRunning bool
 	cleanedApps2 := []string{}
 	for _, app := range cleanedApps {
-		if strings.Trim(app, "\n") != strings.Trim(program.Program, "\n") {
+		if strings.Trim(app, "\n") != strings.Trim(program, "\n") {
 			cleanedApps2 = append(cleanedApps2, app)
 		} else {
 			foundRunning = true
 		}
 	}
 	if !foundRunning {
-		statuser.ErrorMsg("\n"+strings.TrimSuffix(program.Program, "\n")+" is not open", 1)
+		statuser.ErrorMsg("\n"+strings.TrimSuffix(program, "\n")+" is not open", 1)
 	}
 	return cleanedApps2
 }
