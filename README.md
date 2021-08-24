@@ -1,4 +1,4 @@
-<!-- DO NOT REMOVE - contributor_list:data:start:["gleich", "dependabot-preview[bot]", "KhushrajRathod"]:end -->
+<!-- DO NOT REMOVE - contributor_list:data:start:["gleich", "dependabot-preview[bot]", "khrj"]:end -->
 
 ![Title Example](title.gif)
 
@@ -76,6 +76,6 @@ All contributions are welcome! Just make sure that its not an already existing i
 
 - **[@dependabot-preview[bot]](https://github.com/apps/dependabot-preview)**
 
-- **[@KhushrajRathod](https://github.com/KhushrajRathod)**
+- **[@khrj](https://github.com/khrj)**
 
 <!-- DO NOT REMOVE - contributor_list:end -->
