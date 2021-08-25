@@ -45,7 +45,7 @@ _Ignores Google Chrome and Terminal_
 If you want to ignore apps on the fly then you can pass them in as arguments. Keep in mind that spaces and other characters might need to be escaped. Below are two examples
 
 ```bash
-$ nuke Google\ Chrome Visual\ Studio\ Code
+$ nuke "Google Chrome" "Visual Studio Code"
 ```
 
 _Ignores Google Chrome and Visual Studio Code_
