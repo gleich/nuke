@@ -14,7 +14,7 @@
 
 ### 🍎 MacOS
 
-Simply run `brew install gleich/taps/nuke`
+Simply run `brew install gleich/homebrew-taps/nuke`
 
 ### 🐧 Linux
 

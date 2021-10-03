@@ -20,7 +20,7 @@ builds:
 brews:
   - tap:
       owner: gleich
-      name: tap
+      name: homebrew-tap
     folder: Formula
     homepage: 'https://github.com/gleich/nuke'
     description: '☢️ Force quit all applications with one terminal command'
