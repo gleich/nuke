@@ -6,6 +6,7 @@ import (
 	"runtime"
 	"time"
 
+	"github.com/briandowns/spinner"
 	"github.com/gleich/desktop"
 	"github.com/gleich/nuke/pkg/config"
 	"github.com/gleich/nuke/pkg/input"
@@ -13,7 +14,6 @@ import (
 	"github.com/gleich/nuke/pkg/output"
 	"github.com/gleich/nuke/pkg/version"
 	"github.com/gleich/statuser/v2"
-	"github.com/briandowns/spinner"
 )
 
 func main() {
@@ -88,12 +88,12 @@ func main() {
 			}
 		}
 		s2.Stop()
-		statuser.Success("Quitted " + app)
+		statuser.Success("Quit " + app)
 	}
 	if operatingSystem == "darwin" {
 		macos.CloseFinder()
 	}
 
 	fmt.Println()
-	statuser.Success("All Applications Quitted! Have a good day :)")
+	statuser.Success("Quit All Applications! Have a good day :)")
 }
