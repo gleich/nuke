@@ -1,4 +1,4 @@
-<!-- DO NOT REMOVE - contributor_list:data:start:["gleich", "dependabot-preview[bot]", "khrj"]:end -->
+<!-- DO NOT REMOVE - contributor_list:data:start:["gleich", "dependabot-preview[bot]", "fharper", "khrj"]:end -->
 
 ![Title Example](title.gif)
 
@@ -75,6 +75,8 @@ All contributions are welcome! Just make sure that its not an already existing i
 - **[@gleich](https://github.com/gleich)**
 
 - **[@dependabot-preview[bot]](https://github.com/apps/dependabot-preview)**
+
+- **[@fharper](https://github.com/fharper)**
 
 - **[@khrj](https://github.com/khrj)**
 
