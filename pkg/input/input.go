@@ -39,7 +39,7 @@ func ExecutingTerm(runningApps, ignoredApps []string) []string {
 	if program == "" {
 		err := survey.AskOne(
 			&survey.Select{
-				Message:  "Running nuke from (what app your currently using)",
+				Message:  "Running nuke from (what app you're currently using)",
 				Options:  cleanedApps,
 				PageSize: 25,
 			},
