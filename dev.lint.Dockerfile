@@ -1,4 +1,4 @@
-FROM golangci/golangci-lint:v1.38
+FROM golangci/golangci-lint:v1.50
 
 # Meta data
 LABEL maintainer="matthewgleich@gmail.com"
@@ -22,14 +22,14 @@ RUN go get ./... \
     && mv goreleaser /usr/bin
 
 # Installing make
-RUN apt-get update && apt-get install make=4.2.1-1.2 -y --no-install-recommends \
+RUN apt-get update && apt-get install make=4.3-4.1 -y --no-install-recommends \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 # Installing go 1.17
-RUN go install "golang.org/dl/go1.17@latest" \
-    && go1.17 download \
-    && mv "$(which go1.17)" "$(which go)"
+RUN go install "golang.org/dl/go1.19@latest" \
+    && go1.19 download \
+    && mv "$(which go1.19)" "$(which go)"
 
 WORKDIR /usr/src/app
 
