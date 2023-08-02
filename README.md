@@ -64,6 +64,16 @@ By default nuke checks if there is an update every time you run it. If you want 
 ignoredUpdates: true
 ```
 
+### 🚫 Ignoring running nuke from app
+
+By default nuke ask you to select the application from which you are running it. Once selected, it will be ignored. If you want to turn it off, let's say for automation, add the following to your config:
+
+```yaml
+ignoredRunningFrom: true
+```
+
+If you set `ignoredRunningFrom` to `true`, be sure to add the application you are using to run nuke from into [ignoreApps](#-ignoring-apps). You can also pass it as an argument. If you don't, nuke will raise an error trying to close the application you are running it from.
+
 ## 🙋‍♀️🙋‍♂️ Contributing
 
 All contributions are welcome! Just make sure that its not an already existing issue or pull request.

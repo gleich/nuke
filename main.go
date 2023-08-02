@@ -67,7 +67,7 @@ func main() {
 	s.Stop()
 
 	// Getting executing terminal
-	cleanedApps := input.ExecutingTerm(apps, ignoredApps)
+	cleanedApps := input.ExecutingTerm(apps, ignoredApps, configContents.IgnoredRunningFrom)
 	fmt.Println("")
 
 	// Quitting applications
