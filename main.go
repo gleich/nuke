@@ -24,15 +24,15 @@ func main() {
 	}
 
 	var configContents config.Conf
-	if config.Exists() {
-		config.Read(&configContents)
-	}
-
-	// Ignoring apps
 	var ignoredApps []string
 	if config.Exists() {
+		config.Read(&configContents)
+
+		// Ignoring apps from configurations
 		ignoredApps = configContents.IgnoredApps
 	}
+
+	// Ignoring apps from command line
 	ignoredApps = append(ignoredApps, os.Args[1:]...)
 
 	output.Title()
