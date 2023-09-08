@@ -49,7 +49,7 @@ func main() {
 	s.Start()
 	switch operatingSystem {
 	case "darwin":
-		macApps, err := desktop.MacOSApplications()
+		macApps, err := desktop.MacOSApplications(configContents.IncludeMenubarApps)
 		if err != nil {
 			statuser.Error("Failed to get macos applications", err, 1)
 		}

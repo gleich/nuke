@@ -56,6 +56,16 @@ $ nuke Music Slack Notion
 
 _Ignores Music, Slack, and Notion_
 
+### ➕ Include menubar apps
+
+By default, Nuke will only close and list applications running from the Dock. If you want to also include the ones running only in the menubar, you can add the following to your config:
+
+```yaml
+includeMenubarApps: true
+```
+
+This is a macOS only option.
+
 ### 🚀 Update Checks
 
 By default nuke checks if there is an update every time you run it. If you want to turn it off add the following to your config:
