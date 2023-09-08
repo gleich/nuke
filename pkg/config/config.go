@@ -11,8 +11,9 @@ var path = "/.config/nuke/"
 
 // Config for nuke
 type Conf struct {
-	IgnoreUpdates bool     `yaml:"ignoredUpdates"`
-	IgnoredApps   []string `yaml:"ignoredApps"`
+	IgnoreUpdates      bool     `yaml:"ignoredUpdates"`
+	IgnoredApps        []string `yaml:"ignoredApps"`
+	IncludeMenubarApps bool     `yaml:"includeMenubarApps"`
 }
 
 // Check if the config exists
