@@ -10,7 +10,7 @@ import (
 )
 
 // Ask the user what terminal they are executing from
-func ExecutingTerm(runningApps, ignoredApps []string) []string {
+func ExecutingTerm(runningApps, ignoredApps []string, ignoredRunningFrom bool) []string {
 	cleanedApps := []string{}
 
 	// Removing ignored applications
@@ -29,23 +29,26 @@ func ExecutingTerm(runningApps, ignoredApps []string) []string {
 
 	// Automatically select terminal as kitty if $TERM is xterm-kitty
 	var program string
-	for _, app := range runningApps {
-		if app == "kitty" && os.Getenv("TERM") == "xterm-kitty" {
-			statuser.Success("Kitty terminal automatically detected")
-			program = "kitty"
-		}
-	}
 
-	if program == "" {
-		err := survey.AskOne(
-			&survey.Select{
-				Message:  "Running nuke from (what app you're currently using)",
-				Options:  cleanedApps,
-				PageSize: 25,
-			},
-			&program)
-		if err != nil {
-			statuser.Error("Failed to get running terminal", err, 1)
+	if !ignoredRunningFrom {
+		for _, app := range runningApps {
+			if app == "kitty" && os.Getenv("TERM") == "xterm-kitty" {
+				statuser.Success("Kitty terminal automatically detected")
+				program = "kitty"
+			}
+		}
+
+		if program == "" {
+			err := survey.AskOne(
+				&survey.Select{
+					Message:  "Running nuke from (what app you're currently using)",
+					Options:  cleanedApps,
+					PageSize: 25,
+				},
+				&program)
+			if err != nil {
+				statuser.Error("Failed to get running terminal", err, 1)
+			}
 		}
 	}
 
@@ -58,7 +61,7 @@ func ExecutingTerm(runningApps, ignoredApps []string) []string {
 			foundRunning = true
 		}
 	}
-	if !foundRunning {
+	if !foundRunning && !ignoredRunningFrom {
 		statuser.ErrorMsg("\n"+strings.TrimSuffix(program, "\n")+" is not open", 1)
 	}
 	return cleanedApps2
